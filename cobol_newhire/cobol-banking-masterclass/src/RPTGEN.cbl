@@ -1,4 +1,4 @@
-      ******************************************************************
+ ******************************************************************
       * RPTGEN.cbl - Report Generator with Control Breaks
       *
       * Generates a comprehensive financial report with control
@@ -162,13 +162,11 @@
            05  FILLER PIC X(1)  VALUE "|".
            05  FILLER PIC X(10) VALUE "  OPENED  ".
            05  FILLER PIC X(1)  VALUE "|".
-           05  FILLER PIC X(5)  VALUE " AGE ".
-           05  FILLER PIC X(1)  VALUE "|".
            05  FILLER PIC X(10) VALUE " LAST TXN ".
            05  FILLER PIC X(1)  VALUE "|".
            05  FILLER PIC X(6)  VALUE "  TXN ".
            05  FILLER PIC X(1)  VALUE "|".
-           05  FILLER PIC X(11) VALUE SPACES.
+           05  FILLER PIC X(16) VALUE SPACES.
 
        01  WS-DETAIL-LINE.
            05  FILLER PIC X(1)  VALUE SPACES.
@@ -187,14 +185,11 @@
            05  FILLER PIC X(1)  VALUE "|".
            05  WS-DL-OPENED   PIC X(10).
            05  FILLER PIC X(1)  VALUE "|".
-           05  WS-DL-AGE      PIC ZZ9.
-           05  FILLER PIC X(2)  VALUE SPACES.
-           05  FILLER PIC X(1)  VALUE "|".
            05  WS-DL-LASTTXN  PIC X(10).
            05  FILLER PIC X(1)  VALUE "|".
            05  WS-DL-TXNCNT   PIC ZZ,ZZ9.
            05  FILLER PIC X(1)  VALUE "|".
-           05  FILLER PIC X(11) VALUE SPACES.
+           05  FILLER PIC X(16) VALUE SPACES.
 
        01  WS-TYPE-TOTAL-LINE.
            05  FILLER PIC X(1)  VALUE SPACES.
@@ -271,10 +266,6 @@
        01  WS-EOF-FLAG                   PIC X(1) VALUE "N".
            88  WS-END-OF-FILE            VALUE "Y".
        01  WS-FORMATTED-DATE-W           PIC X(10).
-       01  WS-ACCT-AGE-YEARS             PIC 9(3).
-       01  WS-OPEN-DATE-JULIAN           PIC 9(7).
-       01  WS-CURRENT-DATE-JULIAN        PIC 9(7).
-       01  WS-DAYS-DIFF                  PIC 9(7).
 
        PROCEDURE DIVISION.
 
@@ -564,20 +555,6 @@
            END-IF
 
            MOVE ACCT-TXN-COUNT-YTD TO WS-DL-TXNCNT
-
-      *    Calculate account age in years
-           IF ACCT-OPEN-DATE > ZEROS
-               COMPUTE WS-OPEN-DATE-JULIAN =
-                   FUNCTION INTEGER-OF-DATE(ACCT-OPEN-DATE)
-               COMPUTE WS-CURRENT-DATE-JULIAN =
-                   FUNCTION INTEGER-OF-DATE(WS-CURRENT-DATE-INT)
-               COMPUTE WS-DAYS-DIFF =
-                   WS-CURRENT-DATE-JULIAN - WS-OPEN-DATE-JULIAN
-               COMPUTE WS-ACCT-AGE-YEARS = WS-DAYS-DIFF / 365
-               MOVE WS-ACCT-AGE-YEARS TO WS-DL-AGE
-           ELSE
-               MOVE ZEROS TO WS-DL-AGE
-           END-IF
 
            WRITE RPT-LINE FROM WS-DETAIL-LINE
            ADD 1 TO WS-LINE-COUNT

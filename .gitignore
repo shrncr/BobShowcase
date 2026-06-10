@@ -1,0 +1,276 @@
+# ============================================
+# BobShowcase Repository - Master .gitignore
+# ============================================
+
+# ----------------
+# Environment Variables & Secrets
+# ----------------
+.env
+.env.*
+!.env.example
+*.env
+.bob/.env
+.bob/**/.env
+
+# API Keys and Credentials
+**/credentials/
+**/secrets/
+*.key
+*.pem
+*.cert
+*.crt
+*secret*
+*credential*
+*password*
+*apikey*
+*api-key*
+*api_key*
+
+# ----------------
+# Python
+# ----------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.virtualenv/
+
+# PyInstaller
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-version
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ----------------
+# Node.js / JavaScript / React
+# ----------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
+# Package manager locks (optional - uncomment if you want to ignore)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Testing
+coverage/
+.nyc_output/
+
+# Next.js
+.next/
+out/
+
+# Nuxt.js
+.nuxt/
+
+# Gatsby
+.cache/
+public/
+
+# Vite
+*.local
+
+# ----------------
+# COBOL
+# ----------------
+bin/
+*.DAT
+*.RPT
+*.TMP
+*.o
+*.exe
+*.dll
+*.lst
+*.map
+
+# ----------------
+# PHP
+# ----------------
+vendor/
+composer.lock
+*.cache
+
+# ----------------
+# IDE & Editors
+# ----------------
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ntvs*
+*.njsproj
+*.sln
+
+# ----------------
+# Operating Systems
+# ----------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ----------------
+# Logs
+# ----------------
+*.log
+logs/
+*.log.*
+log/
+
+# ----------------
+# Temporary & Backup Files
+# ----------------
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*.old
+*.orig
+
+# ----------------
+# Archives
+# ----------------
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ----------------
+# Database
+# ----------------
+*.sqlite
+*.sqlite3
+*.db
+
+# ----------------
+# Cloud & Deployment
+# ----------------
+.terraform/
+*.tfstate
+*.tfstate.*
+.serverless/
+.aws/
+.gcloud/
+
+# ----------------
+# Documentation Build
+# ----------------
+docs/_build/
+site/
+
+# ----------------
+# Misc
+# ----------------
+.cache/
+*.pid
+*.seed
+*.pid.lock
+.sass-cache/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+
+# Bob AI Assistant - Keep MCP configs but ignore env files
+.bob/.env
+.bob/**/.env
+!.bob/mcp.json
+!.bob/**/*.json
+!.bob/**/*.yaml
+!.bob/**/*.xml
+!.bob/**/*.md
+
+# Project specific
+-p/
+
+# Made with Bob

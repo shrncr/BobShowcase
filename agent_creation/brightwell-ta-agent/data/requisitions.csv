@@ -1,0 +1,6 @@
+req_id,title,department,status,must_have_license,must_have_years,must_have_unit,must_have_certs,nice_to_have_specialty,nice_to_have_education,posted_date
+REQ-2026-001,Registered Nurse - ICU,Critical Care,open,Active RN license in state,2+ years ICU experience,ICU or Critical Care,BLS and ACLS,CCRN certification and Trauma/cardiac ICU experience,BSN preferred,2026-05-15
+REQ-2026-002,Medical Assistant - Primary Care,Primary Care,open,CMA or RMA certification,1+ years primary care,Primary care or family medicine,CMA/RMA,Epic/Cerner experience and Bilingual,N/A,2026-05-20
+REQ-2026-003,Physical Therapist,Rehabilitation Services,open,Active PT license in state,1+ years clinical experience,Clinical physical therapy,DPT degree,Orthopedic or sports medicine specialty and Board certification,N/A,2026-05-18
+REQ-2026-004,Clinical Lab Technician,Laboratory Services,open,MLT or MLS certification and State lab license,2+ years clinical laboratory,Hematology chemistry microbiology,MLT/MLS,Blood bank or molecular diagnostics and LIS experience,N/A,2026-05-22
+REQ-2026-005,Nurse Practitioner - Family Medicine,Primary Care,open,Active NP license with prescriptive authority,2+ years as practicing NP,Family medicine or primary care,FNP-C or AGPCNP-C,Pediatric and geriatric experience and Minor procedures,Bilingual preferred,2026-05-10

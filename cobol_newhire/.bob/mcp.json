@@ -1,0 +1,8 @@
+{"mcpServers":{"trello":{
+            "command":"node",
+            "args":
+                ["location"],
+            "env":
+                {"TRELLO_API_KEY":"key"},
+                    "TRELLO_TOKEN":"token"},
+                "alwaysAllow":["trello_search","trello_get_member","trello_get_board_cards"]}}

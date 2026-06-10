@@ -3,6 +3,14 @@
 # ============================================
 
 # ----------------
+# Demo Project Folders (only for main branch)
+# ----------------
+# These folders are ignored on main branch but tracked on other branches
+agent_creation/
+cobol_newhire/
+framework_migration/
+
+# ----------------
 # Environment Variables & Secrets
 # ----------------
 .env
